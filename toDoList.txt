@@ -1,0 +1,17 @@
+    Objetivos:
+    Implementar camada de front-end.
+        View
+        Controller/Services
+        ApiConnector****
+    
+    Responsabilidades bem definidas;
+    Componentes separados por arquivos;
+    Localstorage mecanismo de persistência****
+        Persistência de usuários e de novos Leads
+    
+    
+    
+        To do list:
+            Implementar inputs como componentes (check)
+                alguns inputs têm comportamento próprio (email+-, senha com a possibilidade de visualizar ou não). Implementar ()
+
