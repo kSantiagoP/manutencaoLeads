@@ -1,9 +1,11 @@
-import TextField from "./components/TextField";
+import LoginForm from "./components/LoginForm";
+
 
 function App() {
+  //colocar o Logo centralizado como banner no head da página
   return (
     <div className="App">
-        <TextField label="Nome"></TextField>
+      <LoginForm></LoginForm>
     </div>
   );
 }

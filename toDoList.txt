@@ -15,3 +15,11 @@
             Implementar inputs como componentes (check)
                 alguns inputs têm comportamento próprio (email+-, senha com a possibilidade de visualizar ou não). Implementar ()
 
+                LOGO: https://www.juscash.com.br/wp-content/themes/s3/assets/img/logo-white.svg
+                Favicon: https://www.juscash.com.br/wp-content/uploads/2023/04/cropped-logo-form-32x32.png
+
+            Implementar persistência de dados ()
+            Implementar modais ()
+            Ajustar identidade visual ()
+            Implementar célula móvel em tabela (check)
+

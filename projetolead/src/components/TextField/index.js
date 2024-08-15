@@ -4,7 +4,7 @@ const TextField = (props) => {
     return(
         <div className="textField">
             <label>{props.label}</label>
-            <input placeholder=""/>
+            <input placeholder="" type={props.type}/>
         </div>
     )
 }
