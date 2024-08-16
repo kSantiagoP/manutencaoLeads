@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "react-icons-kit": "^2.0.0",
-    "react-toastr": "^3.0.0"
+    "react-icons-kit": "^2.0.0"
   }
 }
