@@ -1,19 +1,58 @@
-import { Link } from "react-router-dom";
+import {useState} from 'react';
+import LeadRegistrationForm from '../../components/LeadRegistrationForm';
 import Button from "../../components/Button";
 import Logo from "../../components/Logo";
+import Modal from "react-modal";
+import LeadTable from '../../components/LeadTable';
+import './LeadPage.css';
+
+const customStyles = {
+    content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    },
+};
+
 
 function LeadPage(){
+    const [modalIsOpen, setIsOpen] = useState(false);
+    const [selectedLead, setSelectedLead] = useState(null);
+
+    const leads = JSON.parse(localStorage.getItem('leads')) || []; 
+
+
+
+    function openModal(lead) {
+        setSelectedLead(lead);
+        setIsOpen(true);
+    }
+
+    function closeModal(event) {
+        setIsOpen(false);
+    } 
+    
     function handleClick(){
-        alert("TÁ NA DISNEY, PORRA?");
+        openModal();
     }
     return(
         <div>
             <Logo></Logo>
-            <Link to='/login'>
-                <img src="https://i.pinimg.com/474x/ed/73/7f/ed737fcd3105543f05d91aefb65553fa.jpg"/>
-            </Link>
-            <Button color="#2798BA" handleClick={handleClick} centralize={true}>+ Novo Lead</Button>
-
+            <Modal
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+                style={customStyles}
+                contentLabel="Example Modal">
+                    <LeadRegistrationForm  lead={selectedLead} closeModal={closeModal}></LeadRegistrationForm>
+            </Modal>
+            <div style={{ display: 'flex', justifyContent: 'flex-end', width: '100%' }}>
+                <Button color="#2798BA" handleClick={handleClick} centralize={false} >+ Novo Lead</Button>
+            </div>
+            <LeadTable leads={leads} onLeadClick={openModal} />
+           
         </div>
 
     )

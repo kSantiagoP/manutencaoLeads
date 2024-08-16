@@ -1,0 +1,34 @@
+.leadTableContainer {
+    width: 100%;
+    overflow-x: auto; /* Permite rolar horizontalmente em telas pequenas */
+    margin: 20px 0;
+}
+
+.leadTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.leadTable th,
+.leadTable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.leadTable th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.leadItem {
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.leadItem:hover {
+    background-color: #f0f0f0;
+}

@@ -52,7 +52,6 @@ function processInputValues(data) {
     };
 
     // Obtém a lista de usuários do localStorage, se existir
-    //implementar não repetição de email registrado
     let users = JSON.parse(localStorage.getItem('users')) || [];
 
    if(users.find(user => user.email === email)){
