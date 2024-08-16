@@ -1,4 +1,5 @@
 .textField{
+    position: relative;
     margin: 24px 0;
 }
 
@@ -6,14 +7,23 @@
     display: block;
     margin-bottom: 8px;
     font-size: 24px;
+    color: #002763;
+}
+
+
+.textField .required-asterisk {
+    color: red;
+    margin-left: 4px;
 }
 
 .textField input{
     background-color: #FFF;
     box-shadow: 10px 10px 30px rgba(0,0,0,0.06);
     width: 100%;
-    border: none;
+    border: 2px solid #000;
     font-size: 24px;
-    padding: 24px;
+    padding: 5px;
     box-sizing: border-box;
+    border-radius: 8px;
+    padding-right: 35px; /* Reserva espaço para o ícone */
 }

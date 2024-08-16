@@ -1,0 +1,22 @@
+.loginPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.registerLink {
+    margin-top: 10px; /* Ajusta o espaço acima do link */
+    width: 100%; /* Mantém o container ocupando toda a largura disponível */
+    display: flex;
+    justify-content: flex-end; /* Alinha o link à direita */
+}
+
+.registerLink a {
+    text-decoration: none;
+    color: #007bff; /* Cor do link */
+    font-size: 14px; /* Tamanho da fonte menor */
+}
+
+.registerLink p {
+    margin: 0; /* Remove qualquer margem extra ao redor do parágrafo */
+}

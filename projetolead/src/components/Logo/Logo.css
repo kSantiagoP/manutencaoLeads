@@ -1,0 +1,14 @@
+
+.logoContainer {
+    text-align: center; /* Centraliza o logo horizontalmente */
+    margin-top: 40px; 
+    margin-bottom: 20px; 
+    height: auto;
+}
+
+.logo {
+    max-width: 800px; /* Garante que o logo não ultrapasse o contêiner */
+    height: auto; /* Mantém a proporção do logo */
+    object-fit: contain; 
+    transform: scale(3);
+}

@@ -1,0 +1,11 @@
+.loginLink {
+    margin-top: 20px; /* Adiciona um espaço acima do link */
+    width: 100%; /* Faz com que o container ocupe toda a largura disponível */
+    display: flex;
+    justify-content: flex-end; /* Alinha o link à direita */
+}
+
+.loginLink a {
+    text-decoration: none;
+    color: #007bff; /* Cor do link, ajuste conforme necessário */
+}

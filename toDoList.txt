@@ -10,7 +10,11 @@
         Persistência de usuários e de novos Leads
     
     
-    
+    detalhes visuais:
+        o verde deles é 26C05B
+        o azul deles é +- 002763
+
+
         To do list:
             Implementar inputs como componentes (check)
                 alguns inputs têm comportamento próprio (email+-, senha com a possibilidade de visualizar ou não). Implementar (check)
@@ -22,4 +26,6 @@
             Implementar modais ()
             Ajustar identidade visual ()
             Implementar célula móvel em tabela (check)
+
+    
 

@@ -3,7 +3,7 @@ import TextField from "../TextField";
 const EmailField = (props) =>{
 
     return (
-        <TextField label="Email" type="email"></TextField>
+        <TextField label={props.label} required={props.required} type="email" name={props.name}></TextField>
     )
 }
 

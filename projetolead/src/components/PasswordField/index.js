@@ -7,8 +7,8 @@ const PasswordField = (props) =>{
     const {type, icon, handleToggle} = usePasswordFieldVisibilityController();
     
     return(
-        <div className="passwordField">
-            <TextField label="Senha" type={type}>
+        <div className="textField">
+            <TextField label={props.label} required={props.required} type={type} name={props.name}>
             </TextField>
             <span className="icon-container" onClick={handleToggle}>
                     <Icon icon={icon} size={25}/>

@@ -1,0 +1,10 @@
+.signInForm{
+    display: flex;
+    justify-content: center;
+    margin: 80px 0;
+}
+
+
+.signInForm form{
+    max-width: 80%;
+}

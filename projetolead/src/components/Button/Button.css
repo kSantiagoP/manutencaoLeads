@@ -1,0 +1,18 @@
+.button {
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #1e9b4a;
+}
+
+.centralize {
+    display: block;
+    margin: 0 auto;
+}
