@@ -13,7 +13,7 @@
     
         To do list:
             Implementar inputs como componentes (check)
-                alguns inputs têm comportamento próprio (email+-, senha com a possibilidade de visualizar ou não). Implementar ()
+                alguns inputs têm comportamento próprio (email+-, senha com a possibilidade de visualizar ou não). Implementar (check)
 
                 LOGO: https://www.juscash.com.br/wp-content/themes/s3/assets/img/logo-white.svg
                 Favicon: https://www.juscash.com.br/wp-content/uploads/2023/04/cropped-logo-form-32x32.png

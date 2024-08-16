@@ -3,7 +3,7 @@ import {eyeOff} from 'react-icons-kit/feather';
 import {eye} from 'react-icons-kit/feather';
 
 
-const usePasswordFieldController = () =>{
+const usePasswordFieldVisibilityController = () =>{
     const [type, setType] = useState('password');
     const [icon, setIcon] = useState(eyeOff);
     const handleToggle = () => {
@@ -23,4 +23,4 @@ const usePasswordFieldController = () =>{
     }
 }
 
-export default usePasswordFieldController;
+export default usePasswordFieldVisibilityController;
