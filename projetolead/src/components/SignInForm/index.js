@@ -14,7 +14,6 @@ function SignInForm(){
             navigate("/login");
         }
 
-
         event.preventDefault();
     }; 
     return(

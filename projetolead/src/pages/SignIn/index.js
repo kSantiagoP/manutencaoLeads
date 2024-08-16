@@ -4,12 +4,10 @@ import SignInForm from "../../components/SignInForm";
 import './SignInPage.css'
 
 function SignInPage(){
-
     return(
 
         <div>
             <Logo/>
-
             <SignInForm/>
             
             <div className="loginLink">
