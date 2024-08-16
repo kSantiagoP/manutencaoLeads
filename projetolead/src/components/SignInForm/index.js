@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import TextField from "../TextField";
 import EmailField from "../EmailField";
 import PasswordField from "../PasswordField";
@@ -6,15 +7,14 @@ import processInputValues from "../../controllers/SignInFormController";
 import './SignInForm.css';
 
 function SignInForm(){
+    const navigate = useNavigate();
     const handleSubmit = (event) => {
-        processInputValues(new FormData(event.target));
+        if(processInputValues(new FormData(event.target))){
+            /*redireciona pra login se deu tudo certo*/
+            navigate("/login");
+        }
 
-        /*
-            trata dados na controller para enviar para o "banco"
-            se processInput retornar true, deu tudo certo -> encaminha pro login
-            caso contrário preventDefault, pede pro usuario dar input corretamente
-        
-        */ 
+
         event.preventDefault();
     }; 
     return(
