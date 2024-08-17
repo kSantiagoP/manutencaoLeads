@@ -1,4 +1,5 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
 import LeadRegistrationForm from '../../components/LeadRegistrationForm';
 import Button from "../../components/Button";
 import Logo from "../../components/Logo";
@@ -21,10 +22,18 @@ const customStyles = {
 function LeadPage(){
     const [modalIsOpen, setIsOpen] = useState(false);
     const [selectedLead, setSelectedLead] = useState(null);
+    const navigate = useNavigate();
+
 
     const leads = JSON.parse(localStorage.getItem('leads')) || []; 
 
 
+    useEffect(() => {        
+        const authToken = localStorage.getItem('authToken');
+        if (!authToken) {
+            navigate('/login');
+        }
+    }, [navigate]);
 
     function openModal(lead) {
         setSelectedLead(lead);
@@ -51,7 +60,9 @@ function LeadPage(){
             <div style={{ display: 'flex', justifyContent: 'flex-end', width: '100%' }}>
                 <Button color="#2798BA" handleClick={handleClick} centralize={false} >+ Novo Lead</Button>
             </div>
+  
             <LeadTable leads={leads} onLeadClick={openModal} />
+
            
         </div>
 

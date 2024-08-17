@@ -11,7 +11,8 @@ function LeadRegistrationForm({ lead, closeModal }) {
 
     const handleCancel = (event) => {
         event.preventDefault();
-        closeModal();
+        console.log(isEditMode);
+        //closeModal();
     }
 
     const handleSubmit = (event) => {
@@ -19,6 +20,13 @@ function LeadRegistrationForm({ lead, closeModal }) {
             event.preventDefault();
         }
     } 
+
+    const allChecked = () => {
+        if(lead.option1 && lead.option2 &&  lead.option3 && lead.option4){
+            return 'checked';
+        }
+        return "";
+    }
 
     return (
         <section className="leadFormSection">
@@ -52,7 +60,7 @@ function LeadRegistrationForm({ lead, closeModal }) {
                     <Checkbox 
                         label="Todos" 
                         name="all" 
-                        checked={checkboxes.all} 
+                        checked={isEditMode? allChecked() : checkboxes.all} 
                         onChange={handleCheckboxChange} 
                         disabled={isEditMode}
                     />

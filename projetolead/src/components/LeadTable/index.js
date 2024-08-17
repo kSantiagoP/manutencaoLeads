@@ -1,23 +1,8 @@
 import './LeadTable.css'; 
+import LeadTableRow from '../LeadTableRow';
 
 
 function LeadTable({ leads, onLeadClick }) {
-    const columns = {
-        clientePotencial: [],
-        dadosConfirmados: [],
-        analiseLead: []
-    };
-
-    // Classifica os leads nas colunas corretas
-    leads.forEach(lead => {
-        if (lead.status === 'clientePotencial') {
-            columns.clientePotencial.push(lead);
-        } else if (lead.status === 'dadosConfirmados') {
-            columns.dadosConfirmados.push(lead);
-        } else if (lead.status === 'analiseLead') {
-            columns.analiseLead.push(lead);
-        }
-    });
 
     return (
         <div className="leadTableContainer">
@@ -30,8 +15,23 @@ function LeadTable({ leads, onLeadClick }) {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>
+                    {leads.map((lead, key) =>{
+                        return(
+                            <LeadTableRow lead={lead} idRow={key} onLeadClick={onLeadClick}></LeadTableRow>
+                        )
+                    })}
+                </tbody>
+            </table>
+        </div>
+    );
+}
+
+export default LeadTable;
+
+/*
+
+
+<td>
                             {columns.clientePotencial.map(lead => (
                                 <div
                                     key={lead.email}
@@ -64,11 +64,4 @@ function LeadTable({ leads, onLeadClick }) {
                                 </div>
                             ))}
                         </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    );
-}
-
-export default LeadTable;
+*/

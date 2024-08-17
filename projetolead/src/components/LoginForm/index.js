@@ -10,11 +10,16 @@ function LoginForm(){
     const navigate = useNavigate();
     const handleSubmit = (event) => {
 
-        if(validateCredentials(new FormData(event.target))){
+        event.preventDefault();
+
+        const formData = new FormData(event.target);
+        
+        if(validateCredentials(formData)){
+            
+            localStorage.setItem('authToken', true); 
+
             navigate('/lead');
         }
-        
-        event.preventDefault();
     }; 
     return(
         <section className="loginForm">
