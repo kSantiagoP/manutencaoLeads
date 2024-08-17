@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/manutencaoLeads/static/css/main.0a9ebc66.css",
+    "main.js": "/manutencaoLeads/static/js/main.e23aff3d.js",
+    "index.html": "/manutencaoLeads/index.html",
+    "main.0a9ebc66.css.map": "/manutencaoLeads/static/css/main.0a9ebc66.css.map",
+    "main.e23aff3d.js.map": "/manutencaoLeads/static/js/main.e23aff3d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0a9ebc66.css",
+    "static/js/main.e23aff3d.js"
+  ]
+}
