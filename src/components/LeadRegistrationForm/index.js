@@ -11,8 +11,7 @@ function LeadRegistrationForm({ lead, closeModal }) {
 
     const handleCancel = (event) => {
         event.preventDefault();
-        console.log(isEditMode);
-        //closeModal();
+        closeModal();
     }
 
     const handleSubmit = (event) => {
